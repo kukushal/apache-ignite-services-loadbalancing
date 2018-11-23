@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+}
+
+group 'apache.ignite.services.loadbalancing'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+def igniteVersion = "2.6.0"
+
+dependencies {
+    compile group: 'org.apache.ignite', name: 'ignite-core', version: igniteVersion
+    
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
