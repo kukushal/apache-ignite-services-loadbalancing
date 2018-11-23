@@ -21,9 +21,9 @@ import static org.junit.Assert.assertArrayEquals;
 
 /** Test Adaptive load balancing strategy on a real Ignite cluster running locally. */
 public class AdaptiveLoadBalancingSystemTests {
-    /** Assign calls to nodes with lowest CPU utilisation. */
+    /** Assign calls to nodes with lowest utilisation. */
     @Test
-    public void assignCallsToNodesWithLowestCpuUtilisation() {
+    public void assignCallsToNodesWithLowestUtilisation() {
         try (TestCluster testCluster = new TestCluster(5)) {
             final String SVC_NAME = "Storage";
 
