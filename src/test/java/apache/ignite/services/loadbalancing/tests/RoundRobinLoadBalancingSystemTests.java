@@ -12,11 +12,11 @@ import java.util.stream.IntStream;
 
 import static org.junit.Assert.assertTrue;
 
-/** Test on a real Ignite cluster running locally. */
-public class SystemTests {
-    /** Round Robin Algorithm (RRA) assigns tasks sequentially and evenly to all the nodes. */
+/** Test Round Robin load balancing strategy on a real Ignite cluster running locally. */
+public class RoundRobinLoadBalancingSystemTests {
+    /** Assign calls sequentially and evenly. */
     @Test
-    public void roundRobinLoadBalancingAssignsCallsSequentiallyAndEvenly() {
+    public void assignCallsSequentiallyAndEvenly() {
         final int CLUSTER_SIZE = 3;
         final int CALLS_PER_SVC = 10;
         final String SVC_NAME = "Storage";

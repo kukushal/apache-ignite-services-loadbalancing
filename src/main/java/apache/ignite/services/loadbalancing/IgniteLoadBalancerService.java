@@ -12,7 +12,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 /** Ignite {@link LoadBalancer} implementation. */
-class IgniteLoadBalancerService implements LoadBalancer, Service {
+public class IgniteLoadBalancerService implements LoadBalancer, Service {
     /** Ignite. */
     @IgniteInstanceResource Ignite ignite;
 

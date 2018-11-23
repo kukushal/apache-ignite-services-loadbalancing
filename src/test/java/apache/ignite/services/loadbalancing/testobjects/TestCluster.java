@@ -33,6 +33,11 @@ public final class TestCluster implements AutoCloseable {
         return nodes.get(idx);
     }
 
+    /** @return Number of nodes in the cluster. */
+    public int size() {
+        return nodes.size();
+    }
+
     /** */
     private IgniteConfiguration createIgniteConfiguration(int idx) {
         return new IgniteConfiguration()

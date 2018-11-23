@@ -6,7 +6,6 @@ import org.apache.ignite.Ignition;
 import org.apache.ignite.cluster.ClusterGroup;
 
 import java.lang.reflect.InvocationHandler;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 import java.util.Objects;
@@ -62,7 +61,7 @@ public class IgniteServiceLocator implements ServiceLocator {
 
     /** @return Lazily initialized {@link LoadBalancer}. */
     private LoadBalancer getLoadBalancer(int attempt) {
-        final String LB_SVC_NAME = IgniteLoadBalancerService.class.getSimpleName();
+        final String LB_SVC_NAME = LoadBalancer.class.getSimpleName();
 
         if (attempt > 1)
             throw new RuntimeException("Failed to deploy " + LB_SVC_NAME);
